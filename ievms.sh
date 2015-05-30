@@ -151,7 +151,7 @@ check_ext_pack() {
         check_version
         local archive="Oracle_VM_VirtualBox_Extension_Pack-${major_minor_release}.vbox-extpack"
         local url="http://download.virtualbox.org/virtualbox/${major_minor_release}/${archive}"
-        local md5s="https://www.virtualbox.org/download/hashes/${major_minor_release}/MD5SUMS"
+        local md5s="http://download.virtualbox.org/virtualbox/${major_minor_release}/MD5SUMS"
         local md5=`curl ${curl_opts} -L "${md5s}" | grep "${archive}" | cut -c-32`
 
         download "Oracle VM VirtualBox Extension Pack" "${url}" "${archive}" "${md5}"
